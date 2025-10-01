@@ -46,6 +46,8 @@ Used program: Plantuml
 
 **UML Sequence diagram**
 ![image info](src/UML_SD.png)
+
 Used program: sequencediagram.org
+
 
 
