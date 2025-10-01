@@ -69,5 +69,11 @@ Used program: Plantuml
 
 Used program: sequencediagram.org
 
+## References
+- To get a better feeling about Mice and Imputation methods: https://stefvanbuuren.name/fimd/ch-introduction.html
+- For XGBoost: https://arxiv.org/abs/1603.02754 and https://en.wikipedia.org/wiki/XGBoost
+- For Catboost: https://catboost.ai/ and https://arxiv.org/abs/1706.09516
+
+
 
 
