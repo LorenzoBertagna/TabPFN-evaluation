@@ -26,6 +26,8 @@ Here a use case diagram:
 
 ![image info](src/UML_use_case.png)
 
+Used Program: VisualParadigmOnline
+
 **Structure**
 In the python script in src/MICE.py you find the main code used to assess the different imputation methods. This includes classes for mean imputation, mice imputation, KNN imputation, XGBoost, Catboost, random forest and tabPFN. 
 In all the classes there are different functions to evaluate different use cases. 
@@ -68,6 +70,7 @@ Used program: Plantuml
 ![image info](src/UML_SD.png)
 
 Used program: sequencediagram.org
+
 
 
 
