@@ -42,6 +42,10 @@ Under src/tabpfn-extensions you find the new extensions created by the developer
 
 **UML Class diagram**
 ![image info](src/UML_CD.png)
-Used program: Plantuml 
+Used program: Plantuml
+
+**UML Sequence diagram**
+![image info](src/UML_SD.png)
+Used program: sequencediagram.org
 
 
