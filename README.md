@@ -16,7 +16,15 @@ NOTE: Repository is in development.
  
 ## Usage
 **Prerequisites**:
-The code runs on the RWTH Cluster on the node login23-g-1.hpc.itc.rwth-aachen.de. This node has a 4 Invidia H100 Gpu that are used to run both TabPFN and Catboost. Thus, to run the scripts you need to have access to the RWTH Cluster and install the cuda package in python. Other packages like scikitlearn, tabPFN, pandas, numpy, catboost, xgboost, math are needed as well.
+The code runs on the RWTH Cluster on the node login23-g-1.hpc.itc.rwth-aachen.de. This node has a 4 Invidia H100 Gpu 
+that are used to run both TabPFN and Catboost. Thus, to run the scripts you need to have access to the RWTH Cluster and 
+install the cuda package in python. Other packages like scikitlearn, tabPFN, pandas, numpy, catboost, xgboost, math are 
+needed as well. The tabpfn-extensions package is used as well, but this package is already provided in this repository.
+
+**Use cases**
+Here a use case diagram:
+
+![image info](src/UML_use_case.png)
 
 **Structure**
 In the python script in src/MICE.py you find the main code used to assess the different imputation methods. This includes classes for mean imputation, mice imputation, KNN imputation, XGBoost, Catboost, random forest and tabPFN. 
@@ -35,10 +43,22 @@ The third use case is run in ```src/functions/run_error_column.py```. To run it 
 
 For the fourth use case we created the class ```manager_feature_matrix``` in ```src/visualization/create_feature_matrix.py``` and then we run it ```src/functions/run_feature_matrix.py```. 
 
-As a remark, we actually didn't run every time the sinle functions but we run everythig from ```src/run_all.py``. 
+As a remark, we actually didn't run every time the single functions but we run everythig from ```src/run_all.py``. 
 
 To run the second use case, 
 Under src/tabpfn-extensions you find the new extensions created by the developer of tabPFN and by the whole community. Very important for us are the shap functionalities. Source of repository: ```https://github.com/PriorLabs/TabPFN```
+
+**Results**
+
+The results will be automatically stored in the path you specified. The default path (that I chose) is to store the 
+results under ```../results/cluster/```. You are very welcome to store them wherever you prefer :). I decided to store 
+the results using a date and time mechanism, meaning, every day a new folder with the name of the current date will be 
+created. Inside this folder, for each run, folders will be created with the name of the time at which the run was run at. 
+You are obviously welcome to change this mechanism :).
+
+**HPC Cluster** 
+As previously said, we are using the GPU of the RWTH HPC Cluster. To run the simulations and to guarantee an efficient
+time management, I wrote a slurm script that helps submitting jobs. The role of this is to run the file ```run_all.py```.
 
 **UML Class diagram**
 ![image info](src/UML_CD.png)
